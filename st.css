@@ -1,0 +1,9 @@
+.game-board {
+    grid-template-columns: repeat(4, 50px); /* Set the width of each grid to 20px */
+    grid-template-rows: repeat(8, 50px); /* Set the height of each grid to 20px */
+  }
+  
+  .card {
+    width: 50px; /* Set the width of each card to 20px */
+    height: 50px; /* Set the height of each card to 20px */
+  }

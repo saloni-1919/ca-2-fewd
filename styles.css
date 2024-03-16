@@ -1,0 +1,91 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    height: 100vh; /* Make container fill the viewport height */
+}
+
+.game-board {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%; /* Make sure the image takes up the entire card */
+    height: 100%; /* Make sure the image takes up the entire card */
+    object-fit: cover; /* Ensure the image covers the entire card without stretching */
+}
+  
+
+/* Additional CSS for timer positioning */
+
+#timer {
+    position: fixed; /* Position the timer relative to the viewport */
+    top: 20px; /* Distance from the top edge of the viewport */
+    right: 20px; /* Distance from the right edge of the viewport */
+    background-color: #ffffff; /* Background color of the timer */
+    padding: 5px 10px; /* Padding around the timer content */
+    border-radius: 5px; /* Border radius for rounded corners */
+    font-size: 16px; /* Font size of the timer text */
+}
+.restart-button {
+    margin-top: 10px;
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Center-align the text */
+    text-decoration: none; /* No text decoration */
+    display: inline-block; /* Display as inline-block element */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.restart-button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+@keyframes sparkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes sprinkle {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.sparkle {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
+    animation: sparkle 3s ease-out;
+}
+
+.sprinkle {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background-color: lightblue;
+    border-radius: 50%;
+    animation: sprinkle 3s ease-out;
+}
